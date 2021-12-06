@@ -1,0 +1,18 @@
+@mixin font($name, $weight) {
+  @font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом)
+    font-family: "Open Sans";
+    // адрес шрифта и тип
+    src: url("/fonts/" + $name + ".ttf") format("truetype");
+    font-style: normal;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
+
+@include font("OpenSans-Light", 300);
+@include font("OpenSans-Regular", 400);
+@include font("OpenSans-Medium", 500);
+@include font("OpenSans-SemiBold", 600);
+@include font("OpenSans-Bold", 700);
+@include font("OpenSans-ExtraBold", 800);
